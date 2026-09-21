@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment Endorsement PH</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17233b;
+      --muted: #68738a;
+      --line: #d5e1f2;
+      --surface: #ffffff;
+      --accent: #2f73d9;
+      --accent-dark: #1b55a7;
+      --background: #eef5ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px 20px;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, #0d3b82 0%, #246bc1 45%, #8dbcf2 100%);
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    body::before,
+    body::after {
+      position: absolute;
+      z-index: 0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      content: '';
+      pointer-events: none;
+    }
+
+    body::before {
+      width: min(62vw, 760px);
+      height: min(62vw, 760px);
+      top: -28%;
+      left: -14%;
+      background: radial-gradient(circle at 65% 65%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.03) 58%, transparent 59%);
+      box-shadow: 0 0 0 34px rgba(255, 255, 255, 0.05), 0 0 0 68px rgba(255, 255, 255, 0.035);
+    }
+
+    body::after {
+      width: min(52vw, 640px);
+      height: min(52vw, 640px);
+      right: -16%;
+      bottom: -30%;
+      background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03) 55%, transparent 56%);
+      box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.06), 0 0 0 60px rgba(255, 255, 255, 0.04);
+    }
+
+    main {
+      width: min(100%, 760px);
+      padding: clamp(28px, 6vw, 58px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 24px 70px rgba(35, 83, 146, 0.16);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo {
+      width: min(190px, 58vw);
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent-dark);
+      font: 700 0.78rem/1.2 Arial, sans-serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 510px;
+      margin: 16px auto 34px;
+      color: var(--muted);
+      font: 1rem/1.6 Arial, sans-serif;
+    }
+
+    .locations {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 0;
+    }
+
+    .location-link {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--ink);
+      background: var(--surface);
+      font: 700 1.08rem/1.25 Arial, sans-serif;
+      text-align: left;
+      text-decoration: none;
+      transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+    }
+
+    .location-link:hover,
+    .location-link:focus-visible {
+      border-color: var(--accent);
+      box-shadow: 0 10px 24px rgba(47, 115, 217, 0.18);
+      outline: none;
+      transform: translateY(-2px);
+    }
+
+    .arrow {
+      color: var(--accent);
+      font-size: 1.35rem;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: var(--muted);
+      font: 0.78rem/1.4 Arial, sans-serif;
+    }
+
+    @media (max-width: 560px) {
+      .locations { grid-template-columns: 1fr; }
+      main { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="logo.png" alt="Sagility">
+    <p class="eyebrow">Assessment Endorsement PH</p>
+    <h1>Choose a location</h1>
+    <p class="intro">Select the assessment endorsement portal you need to access.</p>
+
+    <nav class="locations" aria-label="Assessment locations">
+      <a class="location-link" href="Assessment-Endorsement-PH-ILO-main/Assessment-Endorsement-PH-ILO-main/index.html">
+        <span>Iloilo City</span><span class="arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a class="location-link" href="Assessment-Endorsement-PH-QC-main/Assessment-Endorsement-PH-QC-main/index.html">
+        <span>Quezon City</span><span class="arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a class="location-link" href="Assessment-Endorsement-PH-ALA-main/Assessment-Endorsement-PH-ALA-main/index.html">
+        <span>Alabang</span><span class="arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a class="location-link" href="Assessment-Endorsement-PH-BHL-main/Assessment-Endorsement-PH-BHL-main/index.html">
+        <span>Bohol</span><span class="arrow" aria-hidden="true">&#8594;</span>
+      </a>
+    </nav>
+
+    <footer>Choose a location to continue.</footer>
+  </main>
+</body>
+</html>
